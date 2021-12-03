@@ -6,7 +6,7 @@ function Home() {
     return (
         <div>
             <TopSearchBar />
-            <GoogleMapIFrame city="Catania"/>
+            {/* <GoogleMapIFrame city="Catania"/> */}
         </div>
     )
 }
