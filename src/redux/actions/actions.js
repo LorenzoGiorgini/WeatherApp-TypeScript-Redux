@@ -1,0 +1,3 @@
+export const SEARCH_QUERY = "SEARCH_QUERY"
+export const GET_METEO_DATA = "GET_METEO_DATA"
+export const TOGGLE_LOADER = "TOGGLE_LOADER"
