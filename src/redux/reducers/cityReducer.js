@@ -37,19 +37,17 @@ const cityReducer = (state = cityInitialState, action) => {
 export const getMeteoData = (query) => {
   return async (dispatch) => {
     try {
-      console.log("here")
       dispatch({
         type: TOGGLE_LOADER,
         payload: true,
       });
       
       let response = await fetch(
-        `api.openweathermap.org/data/2.5/weather?q=${query}&appid=bdbfa1e0cc6e76ee3ed346adae78a974&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=bdbfa1e0cc6e76ee3ed346adae78a974&units=metric`
       );
 
       if (response.ok) {
         let data = await response.json();
-        console.log(data)
         dispatch({
           type: GET_METEO_DATA,
           payload: data,

@@ -1,5 +1,4 @@
 import { GoSearch } from "react-icons/go";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {getMeteoData} from "../redux/reducers/cityReducer";
 import { SEARCH_QUERY} from "../redux/actions/actions";
@@ -15,17 +14,11 @@ function TopSearchBar() {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (city.search.length > 3) {
-      console.log(city)
-      dispatch(getMeteoData(city.search))
-    }
-  }, [city.search]);
-
+  
   return (
     <div className="top-search-bar">
       <div className="top-search-bar-box">
-        <GoSearch className="icon-search" />
+        <GoSearch className="icon-search" onClick={() => dispatch(getMeteoData(city.search))}/>
         <input
           className="search-bar"
           type="text"
@@ -36,5 +29,6 @@ function TopSearchBar() {
     </div>
   );
 }
+
 
 export default TopSearchBar;

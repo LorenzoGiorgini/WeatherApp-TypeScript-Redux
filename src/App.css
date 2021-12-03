@@ -31,3 +31,40 @@
     height: 20px;
     margin-right: 10px;
 }
+
+.spinning-loader {
+    color: #FF4081;
+}
+
+.div-simple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh!important;
+    width: 100vw!important;
+    background: #212121;
+}
+
+.weather-container {
+    width: 100%;
+    height: 100%;
+    background: #212121;
+    color: white;
+    padding: 20px;
+}
+
+.date-now {
+    color: #FF4081;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.city-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.city-weather {
+    font-size: 14px;
+    font-weight: bold;
+}

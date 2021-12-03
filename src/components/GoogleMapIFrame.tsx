@@ -4,14 +4,14 @@ interface IProps {
 
 function GoogleMapIFrame({city}: IProps) {
   return (
-    <div>
+    <div className="d-flex align-items-center justify-content-center">
       <div
         className="mapouter"
         style={{
           position: "relative",
           textAlign: "right",
-          height: "400px",
-          width: "400px",
+          height: "100%",
+          width: "100%",
         }}
       >
         <div
@@ -19,20 +19,15 @@ function GoogleMapIFrame({city}: IProps) {
           style={{
             overflow: "hidden",
             background: "none!important",
-            height: "400px",
-            width: "400px",
+            height: "100%",
+            width: "100%",
           }}
         >
           <iframe
-            width="400"
-            height="400"
             id="gmap_canvas"
             src={`https://maps.google.com/maps?q=${city}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+            style={{width: "100%", height: "440px"}}
           ></iframe>
-          <a href="http://vin-odometer.info">vin-odometer.info</a>
-          <br />
-
-          <a href="https://embedmaps.info">Embed Google Maps</a>
         </div>
       </div>
     </div>
