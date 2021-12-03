@@ -42,7 +42,7 @@ export const getMeteoData = (query) => {
         payload: true,
       });
       let response = await fetch(
-        `api.openweathermap.org/data/2.5/weather?q=${query}&appid=bdbfa1e0cc6e76ee3ed346adae78a974`
+        `api.openweathermap.org/data/2.5/weather?q=${query}&appid=bdbfa1e0cc6e76ee3ed346adae78a974&units=metric`
       );
 
       if (response.ok) {
