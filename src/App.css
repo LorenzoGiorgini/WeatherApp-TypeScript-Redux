@@ -1,3 +1,7 @@
+body {
+    background: #757575!important;
+}
+
 .top-search-bar {
     height: 75px;
     width: 100%;
@@ -67,4 +71,25 @@
 .city-weather {
     font-size: 14px;
     font-weight: bold;
+}
+
+.clouds {
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+}
+
+.divisor {
+    width: 2px;
+    background: #03A9F4;
+    margin-right: 20px;
+}
+
+.font-infos {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.city-weather-info {
+    margin: 4px;
 }

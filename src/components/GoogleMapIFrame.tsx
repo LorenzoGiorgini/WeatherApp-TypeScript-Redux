@@ -1,5 +1,5 @@
 interface IProps {
-    city: string;
+  city: string;
 }
 
 function GoogleMapIFrame({city}: IProps) {
@@ -26,7 +26,7 @@ function GoogleMapIFrame({city}: IProps) {
           <iframe
             id="gmap_canvas"
             src={`https://maps.google.com/maps?q=${city}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
-            style={{width: "100%", height: "440px"}}
+            style={{width: "100%", height: "440px", border: "2px solid #03A9F4"}}
           ></iframe>
         </div>
       </div>

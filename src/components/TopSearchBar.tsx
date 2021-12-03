@@ -2,6 +2,7 @@ import { GoSearch } from "react-icons/go";
 import { useDispatch, useSelector } from "react-redux";
 import {getMeteoData} from "../redux/reducers/cityReducer";
 import { SEARCH_QUERY} from "../redux/actions/actions";
+import ICity from "../types/ICityData"
 
 const setSearchQuery = (value: string) => ({
   type: SEARCH_QUERY,
@@ -10,7 +11,7 @@ const setSearchQuery = (value: string) => ({
 
 function TopSearchBar() {
 
-  const { city } = useSelector((state: any) => state);
+  const { city } = useSelector((state: ICity) => state);
 
   const dispatch = useDispatch();
 

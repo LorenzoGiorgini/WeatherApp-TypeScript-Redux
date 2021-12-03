@@ -5,9 +5,10 @@ import { useSelector, useDispatch } from "react-redux";
 import Loading from "../components/Loading";
 import { Col, Container, Row } from "react-bootstrap";
 import CityDataMeteo from "../components/CityDataMeteo";
+import ICity from "../types/ICityData";
 
 function Home() {
-  const { city } = useSelector((state: any) => state);
+  const { city } = useSelector((state: ICity) => state);
 
   return city.loader === true ? (
     <div className="div-simple">
