@@ -1,4 +1,4 @@
-interface ICityData {
+export interface ICityData {
   coord: {
     lon: number;
     lat: number;
@@ -42,7 +42,7 @@ interface IWeatherData {
   icon: string;
 }
 
-export interface ICity {
+interface ICity {
   city: {
     search: string;
     cityData: ICityData;

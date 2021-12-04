@@ -1,16 +1,20 @@
+import { AnyAction, Dispatch } from "redux";
+import { ICityData } from "../../types/ICityData";
+import ICityInitialState from "../../types/redux/ICityInitialState";
+
 import {
   SEARCH_QUERY,
   GET_METEO_DATA,
   TOGGLE_LOADER,
 } from "../actions/actions";
 
-const cityInitialState = {
+const cityInitialState: ICityInitialState = {
   search: "",
-  cityData: {},
+  cityData: <ICityData>{},
   loader: false,
 };
 
-const cityReducer = (state = cityInitialState, action) => {
+const cityReducer = (state = cityInitialState, action: AnyAction) => {
   const { payload, type } = action;
 
   switch (type) {
@@ -34,14 +38,14 @@ const cityReducer = (state = cityInitialState, action) => {
   }
 };
 
-export const getMeteoData = (query) => {
-  return async (dispatch) => {
+export const getMeteoData = (query: string) => {
+  return async (dispatch: Dispatch) => {
     try {
       dispatch({
         type: TOGGLE_LOADER,
         payload: true,
       });
-      
+
       let response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=bdbfa1e0cc6e76ee3ed346adae78a974&units=metric`
       );
@@ -62,6 +66,7 @@ export const getMeteoData = (query) => {
     }
   };
 };
+
 
 
 export default cityReducer;
